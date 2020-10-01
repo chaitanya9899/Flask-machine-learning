@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Lending Club Loan Predictions</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Loan Detector</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Contact Us</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container">
+<h2 class='text-center mt-3'>Lending Club Loan Predictions</h2>
+<form action="/" method="POST">
+  <br>
+
+  <div class="form-row">
+    <div class="col">
+      <label for="credit.policy">Credit Policy In LendingClub :</label>
+     <select  class="form-control custom-select" name="credit.policy" id="credit.policy">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+    </div>
+    <div class="col">
+      <label for="int.rate">Enter Interest Rate :</label>
+    <input type="text" class="form-control" id="int.rate" name="int.rate" placeholder="Enter interest rate">
+  </div>
+  </div>
+
+ <div class="form-row">
+    <div class="col">
+     <label for="installment">Enter Installment :</label>
+    <input type="text" class="form-control" id="installment" name="installment" placeholder="Enter installment Value">
+  </div>
+    <div class="col">
+     <label for="log.annual.inc">Enter Annual Income Of The Borrower :</label>
+    <input type="text" class="form-control" id="log.annual.inc" name="log.annual.inc" placeholder="Enter annual income">
+  </div>
+  </div>
+
+
+
+  <div class="form-row">
+    <div class="col">
+     <label for="dti">Enter Debt-To-Income Ratio :</label>
+    <input type="text" class="form-control" id="dti" name="dti" placeholder="Enter dti Value">
+  </div>
+    <div class="col">
+     <label for="fico">Enter FICO Credit Score :</label>
+    <input type="text" class="form-control" id="fico" name="fico" placeholder="Enter fico credit score">
+  </div>
+  </div>
+
+
+
+
+  
+  <div class="form-row">
+    <div class="col">
+     <label for="days.with.cr.line">Enter Credit Line :</label>
+    <input type="text" class="form-control" id="days.with.cr.line" name="days.with.cr.line" placeholder="Enter credit line value">
+  </div>
+    <div class="col">
+     <label for="revol.bal">Enter Revolving Balance :</label>
+    <input type="text" class="form-control" id="revol.bal" name="revol.bal" placeholder="Enter revolving balance">
+  </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col">
+     <label for="revol.util">Enter Revolving utilization rate :</label>
+    <input type="text" class="form-control" id="revol.util" name="revol.util" placeholder="Enter utilization rate">
+  </div>
+    <div class="col">
+     <label for="inq.last.6mths">Enter Inquiries By Creditors :</label>
+    <input type="text" class="form-control" id="inq.last.6mths" name="inq.last.6mths" placeholder="Enter inquiries creditors">
+  </div>
+  </div>
+
+ <div class="form-row">
+    <div class="col">
+     <label for="delinq.2yrs">Enter Past Due(in last 2years) :</label>
+    <input type="text" class="form-control" id="delinq.2yrs" name="delinq.2yrs" placeholder="Enter no number">
+  </div>
+    <div class="col">
+      <label for="pub.rec">Public Records :</label>
+     <select  class="form-control custom-select" name="pub.rec" id="pub.rec">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+    </div>
+  </div>
+
+  
+  <div class="form-row">
+    <div class="col">
+     <label for="purpose_credit_card">Purpose Credit Card :</label>
+     <select  class="form-control custom-select" name="purpose_credit_card" id="purpose_credit_card">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+    </div>
+    <div class="col">
+      <label for="purpose_debt_consolidation">Purpose Debt Consolidation :</label>
+     <select  class="form-control custom-select" name="purpose_debt_consolidation" id="purpose_debt_consolidation">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+    </div>
+   </div>
+
+
+  <div class="form-row">
+    <div class="col">
+     <label for="purpose_educational">Purpose Educational :</label>
+     <select  class="form-control custom-select" name="purpose_educational" id="purpose_educational">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+    </div>
+    <div class="col">
+      <label for="purpose_home_improvement">Purpose Home Improvement :</label>
+     <select  class="form-control custom-select" name="purpose_home_improvement" id="purpose_home_improvement">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+    </div>
+   </div>
+
+
+   <div class="form-row">
+    <div class="col">
+     <label for="purpose_major_purchase">Purpose Major Purchase :</label>
+     <select  class="form-control custom-select" name="purpose_major_purchase" id="purpose_major_purchase">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+    </div>
+    <div class="col">
+      <label for="purpose_small_business">Purpose Small Business :</label>
+     <select  class="form-control custom-select" name="purpose_small_business" id="purpose_small_business">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+      </select>
+    </div>
+   </div>
+
+  
+<br>
+
+<button class='btn btn-primary'>Submit</button>
+</form>  
+
+</div>
+
+
+
+
+
+
+
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
